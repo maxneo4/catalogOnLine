@@ -6,8 +6,9 @@
 
 ### MVP
 
-- [ ] Read source from published google docs excel (link image, link miniature, name, description, price)
-- [ ] Show images from public URLs (main image)
+- [x] Read source from published google docs excel (link image, link miniature, name, description, price)
+- [x] Show images from public URLs (main image)
+- [ ] Show in gallery mode the images (cards)
 - [ ] Add name, price and description
 
 ### Second phase
