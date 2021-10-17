@@ -8,24 +8,17 @@ export function getObjectsFromTSV(urlData, process){
    } );
 }
 
-function isEmpty(str) {
-    return (!str || str.length === 0 );
-}
-
 function getDataFromTsv(tsv){
-  var lines=tsv.split("\r\n");
-  var result = [];
-  var headers=lines[0].split("\t");
-  var obj = {}
-  for(var i=0; i<headers.length; i++){
-    obj[headers[i]] = []
-  }
-  for(var i=1;i<lines.length;i++){
-	  var currentline=lines[i].split("\t");
-	  for(var j=0;j<headers.length;j++){
-      if(!isEmpty(currentline[j]))
-		    obj[headers[j]].push(currentline[j]);
-	  }
-  }
-  return obj;
+  var lines=tsv.split("\n");
+    var result = [];
+    var headers=lines[0].split("\t");
+    for(var i=1;i<lines.length;i++){
+        var obj = {};
+        var currentline=lines[i].split("\t");
+        for(var j=0;j<headers.length;j++){
+            obj[headers[j]] = currentline[j];
+        }
+        result.push(obj);
+    }
+    return result;
 }
