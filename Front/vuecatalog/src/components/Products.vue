@@ -16,15 +16,19 @@ onMounted(()=>{
   });
 }) 
 
-
 </script>
 
 <template lang="pug">
 div
-  h1 {{ title }}
-  //img(src="https://dl3.pushbulletusercontent.com/opm9lmfoq1aGD0Mrk2l8vRWALeaUohY7/IMG-20211002-WA0049.jpg")
-div
-  img(v-for="item in items" :src="item.image" ) 
+  h1 {{ title }}  
+center
+  div.mainContainer
+    div.card(v-for="item in items")
+      h3 {{ item.name }}
+      h5 {{ item.price }}
+      img(:src="item.image" ) 
+      br
+      a {{ item.description }}
 </template>
 
 <style scoped>
@@ -32,7 +36,23 @@ a {
   color: #42b983;
 }
 img {
-  width: 75%;
+  width: 45%;
   height: auto;
+}
+.mainContainer {
+  width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 10px;
+}
+.card{
+  border-style: dotted;
+  border-radius: 10px;
+  border-color: black;
+  border-width: 1px;
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
 }
 </style>
