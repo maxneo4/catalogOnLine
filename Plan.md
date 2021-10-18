@@ -8,14 +8,16 @@
 
 - [x] Read source from published google docs excel (link image, link miniature, name, description, price)
 - [x] Show images from public URLs (main image)
-- [ ] Show in gallery mode the images (cards)
-- [ ] Add name, price and description
+- [x] Show in gallery mode the images (cards)
+- [x] Add name, price and description
 
 ### Second phase
 
-- [ ] Every item can have many photos (grouped)
+- [ ] Add category value to generate a dynamic menu to view every category in left side
 
 ### Third phase
+
+- [ ] Every item can have many photos (grouped)
 
 - [ ] Add admin view to edit images and its metadata
 
