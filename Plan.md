@@ -10,6 +10,7 @@
 - [x] Show images from public URLs (main image)
 - [x] Show in gallery mode the images (cards)
 - [x] Add name, price and description
+- [ ] Click in image show large size in modal window
 
 ### Second phase
 

@@ -8,13 +8,24 @@ const props = defineProps({
 })
 
 const items = ref([]);
-const count = ref(0);
+const modalOpen = ref(false);
+const modalImage = ref(null);
 
 onMounted(()=>{  
   getObjectsFromTSV(props.dataUrl , (result) => {   
     items.value = result;
   });
 }) 
+
+const showLargeImage = (image) => {
+  modalImage.value = image;
+  modalOpen.value = true;
+}
+
+const hideLargeImage = () => {
+  modalImage.value = null;
+  modalOpen.value = false;
+} 
 
 </script>
 
@@ -26,9 +37,11 @@ center
     div.card(v-for="item in items")
       h3 {{ item.name }}
       h5 {{ item.price }}
-      img(:src="item.image" ) 
+      img(:src="item.image" @click="showLargeImage(item.image)") 
       br
-      a {{ item.description }}
+      a {{ item.description }}  
+  div.modal(v-if="modalOpen" @click="hideLargeImage()")    
+    img(:src="modalImage")
 </template>
 
 <style scoped>
@@ -38,6 +51,14 @@ a {
 img {
   width: 45%;
   height: auto;
+  cursor: pointer;
+}
+.modal img {
+  width: auto;
+  height: 100%;  
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
 }
 .mainContainer {
   width: 75%;
@@ -54,5 +75,18 @@ img {
   padding: 5px;
   position: relative;
   overflow: hidden;
+}
+.modal{  
+  background-color:rgba(15,15,15,0.5);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  margin: 10px;
+  padding: 10px;
 }
 </style>
