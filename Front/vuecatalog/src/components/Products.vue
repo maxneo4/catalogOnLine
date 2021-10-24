@@ -27,6 +27,10 @@ const hideLargeImage = () => {
   modalOpen.value = false;
 } 
 
+const getWasapLink = (item) => {
+  return `https://api.whatsapp.com/send?phone=${item.wasap}&text=Me%20interesa%20comprar%20el%20producto%20${item.name}`
+}
+
 </script>
 
 <template lang="pug">
@@ -40,6 +44,8 @@ center
       img(:src="item.image" @click="showLargeImage(item.image)") 
       br
       a {{ item.description }}  
+      a(:href="getWasapLink(item)" target="_blank")
+        img.wasap(alt="Pedir producto" src="../assets/wasap.png")
   div.modal(v-if="modalOpen" @click="hideLargeImage()")    
     img(:src="modalImage")
 </template>
@@ -77,7 +83,7 @@ img {
   overflow: hidden;
 }
 .modal{  
-  background-color:rgba(15,15,15,0.5);
+  background-color:rgba(15,15,15,0.75);
   overflow-x: hidden;
   overflow-y: hidden;
   position: fixed;
@@ -88,5 +94,10 @@ img {
   z-index: 9;
   margin: 10px;
   padding: 10px;
+}
+
+.wasap{
+  width: 50px;
+  height: auto;
 }
 </style>

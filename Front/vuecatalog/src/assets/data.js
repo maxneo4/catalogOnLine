@@ -9,7 +9,7 @@ export function getObjectsFromTSV(urlData, process){
 }
 
 function getDataFromTsv(tsv){
-  var lines=tsv.split("\n");
+  var lines=tsv.split("\r\n");
     var result = [];
     var headers=lines[0].split("\t");
     for(var i=1;i<lines.length;i++){

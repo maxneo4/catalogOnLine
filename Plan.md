@@ -10,9 +10,11 @@
 - [x] Show images from public URLs (main image)
 - [x] Show in gallery mode the images (cards)
 - [x] Add name, price and description
-- [ ] Click in image show large size in modal window
+- [x] Click in image show large size in modal window
 
 ### Second phase
+
+- [x] Add link wasap in every product
 
 - [ ] Add category value to generate a dynamic menu to view every category in left side
 

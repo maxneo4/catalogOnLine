@@ -8,3 +8,9 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vR1DpwzN7gPMWzalj4DVpZRx83sA4dcf
 
 https://docs.google.com/spreadsheets/d/1fj2Qwn9UyJCAjDNvOd1DPgJtQqrLRBSSDM2yZWkpGL4/edit?usp=sharing
 
+
+
+## url de donde se hostea el modelo de desarrollo
+
+[Vite App (maxneo4.github.io)](https://maxneo4.github.io/)
+
