@@ -41,13 +41,13 @@ center
     div.card(v-for="item in items")
       h3 {{ item.name }}
       h5 {{ item.price }}
-      img(:src="item.image" @click="showLargeImage(item.image)") 
+      img(:src="item.miniature" @click="showLargeImage(item.image)") 
       br
       a {{ item.description }}  
       a(:href="getWasapLink(item)" target="_blank")
         img.wasap(alt="Pedir producto" src="../assets/wasap.png")
-  div.modal(v-if="modalOpen" @click="hideLargeImage()")    
-    img(:src="modalImage")
+  div.modal(v-if="modalOpen" @click="hideLargeImage()")      
+      img(:src="modalImage")
 </template>
 
 <style scoped>
@@ -59,7 +59,7 @@ img {
   height: auto;
   cursor: pointer;
 }
-.modal img {
+.modal img {  
   width: auto;
   height: 100%;  
   max-width: 100%;
@@ -69,7 +69,7 @@ img {
 .mainContainer {
   width: 75%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 10px;
 }
@@ -82,7 +82,7 @@ img {
   position: relative;
   overflow: hidden;
 }
-.modal{  
+.modal{    
   background-color:rgba(15,15,15,0.75);
   overflow-x: hidden;
   overflow-y: hidden;
@@ -95,9 +95,48 @@ img {
   margin: 10px;
   padding: 10px;
 }
-
 .wasap{
-  width: 50px;
+  width: 40px;
   height: auto;
 }
+
+@media only screen and (max-width: 960px){
+  .mainContainer {
+    width: 75%;    
+    grid-template-columns: 1fr 1fr 1fr;    
+    grid-gap: 15px;
+  }
+  
+  .wasap {      
+      width:40px;
+      height: auto;
+    }
+}
+
+@media only screen and (max-width: 768px){
+  .mainContainer {
+    width: 80%;    
+    grid-template-columns: 1fr 1fr;    
+    grid-gap: 10px;
+  }
+  
+  .wasap {      
+      width:35px;
+      height: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mainContainer {
+    width: 85%;    
+    grid-template-columns: 1fr;    
+    grid-gap: =5px;
+  }
+  
+  .wasap {
+      width:30px;
+      height: auto;
+  }
+}
+
 </style>
