@@ -96,12 +96,25 @@ img {
   padding: 10px;
 }
 .wasap{
-  width: 40px;
+  width:  40px;
   height: auto;
   margin-left: 30%;
 }
 
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 1980px){
+  .mainContainer {
+    width: 80%;    
+    grid-template-columns: 1fr 1fr 1fr 1fr;    
+    grid-gap: 15px;
+  }
+  
+  .wasap {      
+      width: 45px;
+      height: auto;
+    }
+}
+
+@media only screen and (max-width: 1560px){
   .mainContainer {
     width: 85%;    
     grid-template-columns: 1fr 1fr 1fr;    
@@ -109,12 +122,12 @@ img {
   }
   
   .wasap {      
-      width:40px;
+      width: 40px;
       height: auto;
     }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1268px){
   .mainContainer {
     width: 90%;    
     grid-template-columns: 1fr 1fr;    
@@ -127,7 +140,7 @@ img {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 980px) {
   .mainContainer {
     width: 95%;    
     grid-template-columns: 1fr;    
@@ -135,7 +148,7 @@ img {
   }
   
   .wasap {
-      width:30px;
+      width:10%;
       height: auto;
   }
 }
