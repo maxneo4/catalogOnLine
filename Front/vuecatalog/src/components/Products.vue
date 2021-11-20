@@ -103,7 +103,7 @@ img {
 
 @media only screen and (max-width: 960px){
   .mainContainer {
-    width: 75%;    
+    width: 85%;    
     grid-template-columns: 1fr 1fr 1fr;    
     grid-gap: 15px;
   }
@@ -116,7 +116,7 @@ img {
 
 @media only screen and (max-width: 768px){
   .mainContainer {
-    width: 80%;    
+    width: 90%;    
     grid-template-columns: 1fr 1fr;    
     grid-gap: 10px;
   }
@@ -129,7 +129,7 @@ img {
 
 @media only screen and (max-width: 480px) {
   .mainContainer {
-    width: 85%;    
+    width: 95%;    
     grid-template-columns: 1fr;    
     grid-gap: =5px;
   }

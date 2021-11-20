@@ -5,8 +5,8 @@ import Products from './components/Products.vue'
 </script>
 
 <template>
-  <img alt="Company logo" src="./assets/logo.png" />
-  <Products title="Productos a la venta" dataUrl="https://docs.google.com/spreadsheets/d/e/2PACX-1vR1DpwzN7gPMWzalj4DVpZRx83sA4dcf7KkopyCzBe7sEW-H5moE3d7CwMHj7ALJE7ZC4X5ID0nTglh/pub?output=tsv" />
+  <img alt="Company logo" src="./assets/logo.png" class="logo" />
+  <Products title="Productos a la venta (311 522 3485)" dataUrl="https://docs.google.com/spreadsheets/d/e/2PACX-1vR1DpwzN7gPMWzalj4DVpZRx83sA4dcf7KkopyCzBe7sEW-H5moE3d7CwMHj7ALJE7ZC4X5ID0nTglh/pub?output=tsv" />
 </template>
 
 <style>
@@ -17,5 +17,8 @@ import Products from './components/Products.vue'
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.logo {
+  width: 45%;
 }
 </style>
