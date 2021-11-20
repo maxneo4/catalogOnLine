@@ -42,10 +42,10 @@ center
       h3 {{ item.name }}
       h5 {{ item.price }}
       img(:src="item.miniature" @click="showLargeImage(item.image)") 
-      br
-      a {{ item.description }}  
-      a(:href="getWasapLink(item)" target="_blank")
-        img.wasap(alt="Pedir producto" src="../assets/wasap.png")
+      div
+        a {{ item.description }}  
+        a(:href="getWasapLink(item)" target="_blank")
+          img.wasap(alt="Pedir producto" src="../assets/wasap.png")
   div.modal(v-if="modalOpen" @click="hideLargeImage()")      
       img(:src="modalImage")
 </template>
@@ -55,7 +55,7 @@ a {
   color: #42b983;
 }
 img {
-  width: 45%;
+  width: 70%;
   height: auto;
   cursor: pointer;
 }
@@ -98,6 +98,7 @@ img {
 .wasap{
   width: 40px;
   height: auto;
+  margin-left: 30%;
 }
 
 @media only screen and (max-width: 960px){
